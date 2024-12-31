@@ -1,101 +1,90 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Hireup</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-
-    <title>Lara game stats integrator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-white">
-        <header class="absolute inset-x-0 top-0 z-50">
-          <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-            <div class="flex lg:flex-1">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">laraintegral</span>
-                <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
-              </a>
+<body class="bg-gray-50">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">
+                Hireup.
             </div>
-            <div class="flex lg:hidden">
-              <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Open main menu</span>
-                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-              </button>
-            </div>
-            <div class="hidden lg:flex lg:gap-x-12">
-              <a href="#" class="text-sm/6 font-semibold text-gray-900">Product</a>
-              <a href="#" class="text-sm/6 font-semibold text-gray-900">Features</a>
-              <a href="#" class="text-sm/6 font-semibold text-gray-900">Marketplace</a>
-              <a href="#" class="text-sm/6 font-semibold text-gray-900">Company</a>
-            </div>
-            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-              <a href="/login" class="text-sm/6 font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
-            </div>
-          </nav>
-          <!-- Mobile menu, show/hide based on menu open state. -->
-          <div class="lg:hidden" role="dialog" aria-modal="true">
-            <!-- Background backdrop, show/hide based on slide-over state. -->
-            <div class="fixed inset-0 z-50"></div>
-            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-              <div class="flex items-center justify-between">
-                <a href="#" class="-m-1.5 p-1.5">
-                  <span class="sr-only">Your Company</span>
-                  <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
-                </a>
-                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                  <span class="sr-only">Close menu</span>
-                  <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              <div class="mt-6 flow-root">
-                <div class="-my-6 divide-y divide-gray-500/10">
-                  <div class="space-y-2 py-6">
-                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Product</a>
-                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
-                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
-                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a>
-                  </div>
-                  <div class="py-6">
-                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
-      
-        <div class="relative isolate px-6 pt-14 lg:px-8">
-          <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-          </div>
-          <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-26">
-            <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-              <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                link your gaming platform to track records. <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
-              </div>
-            </div>
-            <div class="text-center">
-              <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">The first ever game tracking platfrom</h1>
-              <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.</p>
-              <div class="mt-10 flex items-center justify-center gap-x-6">
-                <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
-                <a href="#" class="text-sm/6 font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></a>
-              </div>
-            </div>
-          </div>
-          <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-blue-500 to-pink-100 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-          </div>
+            <nav class="hidden md:flex space-x-4">
+                <a class="text-gray-600 hover:text-blue-600" href="#">How it works</a>
+                <a class="text-gray-600 hover:text-blue-600" href="#">Plan work</a>
+                <a class="text-gray-600 hover:text-blue-600" href="#">Blog</a>
+                <a class="text-gray-600 hover:text-blue-600" href="#">Browse Jobs</a>
+            </nav>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hidden md:block">Login</button>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-      </div>
-        
+    </header>
+    <main class="container mx-auto px-4 py-16 text-center">
+        <div class="text-sm text-gray-500 mb-2">1000+ Jobs listed here</div>
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Job search for people passionate about startup</h1>
+        <p class="text-gray-600 mb-8">Hireup is a job search for people with passionates. Easily & quickly search thousands of jobs from worldwide wide sources.</p>
+        <div class="flex justify-center items-center space-x-4 mb-8">
+            <img alt="Company logo 1" class="w-10 h-10" src="https://storage.googleapis.com/a1aa/image/FvxhA7xFnFaLKN2IztUVEgwMiV2Bhh55UqB1SVfucjMUtMAKA.jpg"/>
+            <img alt="Company logo 2" class="w-10 h-10" src="https://storage.googleapis.com/a1aa/image/VJ9lqJQrBc6SGJdVPtAUfhQ9DH996O4sjLhDTgoU26RTtMAKA.jpg"/>
+            <img alt="Company logo 3" class="w-10 h-10" src="https://storage.googleapis.com/a1aa/image/haeVMnVp52xWXqWSdlTfsjSZcrXqfmkraFWwyljlhiLY1yAoA.jpg"/>
+            <img alt="Company logo 4" class="w-10 h-10" src="https://storage.googleapis.com/a1aa/image/gLxDEP9bsaaNKB8eq0h9Z22GaIMw6FrP2GPqQbDHWu8RtMAKA.jpg"/>
+            <img alt="Company logo 5" class="w-10 h-10" src="https://storage.googleapis.com/a1aa/image/fNr5tKYf09jgq0JriGMUT9SXGD1783qnNLJvcofhLK2J1yAoA.jpg"/>
+        </div>
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 mb-8">
+            <input class="border border-gray-300 rounded px-4 py-2 w-full md:w-1/2" placeholder="Job title or keywords" type="text"/>
+            <button class="bg-blue-600 text-white px-6 py-2 rounded w-full md:w-auto">Search</button>
+        </div>
+        <div class="text-gray-500">
+            Partnership with <span class="text-blue-600">Glassdoor</span> and <span class="text-blue-600">LinkedIn</span>
+        </div>
+    </main>
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Explore popular jobs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded shadow">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img alt="Company logo" class="w-10 h-10" src="https://storage.googleapis.com/a1aa/image/oAoDCDI4nTYYONhyf4CYIGMNW6MHEpTNd01YEv2MeWrqaZAUA.jpg"/>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Senior Product Designer - Singapore</h3>
+                            <p class="text-gray-500">Mailchimp</p>
+                        </div>
+                    </div>
+                    <div class="text-green-600 font-semibold">12 Applied / 60 Capacity</div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded shadow">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img alt="Company logo" class="w-10 h-10" src="https://storage.googleapis.com/a1aa/image/oAoDCDI4nTYYONhyf4CYIGMNW6MHEpTNd01YEv2MeWrqaZAUA.jpg"/>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Junior Software Engineer - Indonesia</h3>
+                            <p class="text-gray-500">Tokopedia</p>
+                        </div>
+                    </div>
+                    <div class="text-green-600 font-semibold">8 Applied / 40 Capacity</div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded shadow">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img alt="Company logo" class="w-10 h-10" src="https://storage.googleapis.com/a1aa/image/oAoDCDI4nTYYONhyf4CYIGMNW6MHEpTNd01YEv2MeWrqaZAUA.jpg"/>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Senior Account Manager - Singapore</h3>
+                            <p class="text-gray-500">Facebook</p>
+                        </div>
+                    </div>
+                    <div class="text-green-600 font-semibold">9 Applied / 50 Capacity</div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
